@@ -1,6 +1,4 @@
-import 'bootstrap/dist/css/bootstrap.css';
-
-
+import { Button } from 'react-bootstrap';
 import Layout from '../components/layout'
 import Link from 'next/link'
 import fetch from 'isomorphic-unfetch'
@@ -17,6 +15,21 @@ const Index = (props) => (
         </li>
       ))}
     </ul>
+    <hr/>
+    <div className="btn">
+            <Link href="/blog">
+                <Button bsStyle="primary">Click Me</Button>
+            </Link>
+        </div>
+
+        {/* Styling using styled-jsx. */}
+        <style jsx>{`
+              .btn {
+                display: flex;
+                justify-content: center;
+              }`
+        }
+</style>
   </Layout>
 )
 
