@@ -1,3 +1,6 @@
+import 'bootstrap/dist/css/bootstrap.css';
+
+
 import Layout from '../components/layout'
 import Link from 'next/link'
 import fetch from 'isomorphic-unfetch'
