@@ -6,7 +6,7 @@ const Layout = ({ children }) => {
   return (
     <Container>
       <Header as="h1" className="h1">
-        <Grid columns={2}>
+        <Grid columns={3}>
           <Grid.Row>
             <Grid.Column>
               Users Management
@@ -15,6 +15,9 @@ const Layout = ({ children }) => {
               <span className="pullRight">
                 <Clock format={'HH:mm:ss'} ticking={true} timezone={'Etc/UTC'} />
               </span>
+            </Grid.Column>
+            <Grid.Column>
+              <p>Back-end: {process.env.NEXT_PUBLIC_API_URL}</p>
             </Grid.Column>
           </Grid.Row>
         </Grid>
