@@ -1,16 +1,10 @@
 import App from '../components/App'
 
-// `getStaticProps`, and similar Next.js methods like `getStaticPaths` and `getServerSideProps`
-// only run in Node.js. Check the terminal to see the environment variables
-export async function getStaticProps() {
-  // Using the variables below in the browser will return `undefined`. Next.js doesn't
-  // expose environment variables unless they start with `NEXT_PUBLIC_`
+export async function getServerSideProps(context) {
   console.log('[Node.js only] API_URL:', process.env.API_URL)
   console.log('[Node.js only] NEXT_PUBLIC_API_URL:', process.env.NEXT_PUBLIC_API_URL)
 
-  return { props: {},
-    // Re-generate at most once per second if a request comes in
-    revalidate: 1, }
+  return { props: {}, }
 }
 
 export default function Home() {
