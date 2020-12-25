@@ -24,7 +24,7 @@ const Layout = ({ children }) => {
       </Header>
       {children}
       <Divider />
-      <p className="pullRight">
+      <p className="right floated">
         Made with <Icon name="heart" color="red" /> by Chris Mc
       </p>
     </Container>
