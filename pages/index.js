@@ -8,7 +8,9 @@ export async function getStaticProps() {
   console.log('[Node.js only] API_URL:', process.env.API_URL)
   console.log('[Node.js only] NEXT_PUBLIC_API_URL:', process.env.NEXT_PUBLIC_API_URL)
 
-  return { props: {} }
+  return { props: {},
+    // Re-generate at most once per second if a request comes in
+    revalidate: 1, }
 }
 
 export default function Home() {
