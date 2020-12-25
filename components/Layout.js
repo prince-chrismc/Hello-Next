@@ -3,6 +3,8 @@ import Clock from 'react-live-clock'
 import { Header, Container, Divider, Icon, Grid } from 'semantic-ui-react'
 
 const Layout = ({ children }) => {
+  console.log('[Layout.js] API_URL:', process.env.API_URL)
+  console.log('[Layout.js] NEXT_PUBLIC_API_URL:', process.env.NEXT_PUBLIC_API_URL)
   return (
     <Container>
       <Header as="h1" className="h1">
