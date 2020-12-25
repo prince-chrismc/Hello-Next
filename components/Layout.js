@@ -3,8 +3,10 @@ import Clock from 'react-live-clock'
 import { Header, Container, Divider, Icon, Grid } from 'semantic-ui-react'
 
 
-  console.log('[Layout.js] API_URL:', process.env.API_URL)
-  console.log('[Layout.js] NEXT_PUBLIC_API_URL:', process.env.NEXT_PUBLIC_API_URL)
+console.log('[Layout.js] API_URL:', process.env.API_URL)
+console.log('[Layout.js] NEXT_PUBLIC_API_URL:', process.env.NEXT_PUBLIC_API_URL)
+
+const API_URL = process.env.API_URL
 
 const Layout = ({ children }) => {
   return (
@@ -21,7 +23,7 @@ const Layout = ({ children }) => {
               </span>
             </Grid.Column>
             <Grid.Column>
-              <p>Back-end: {process.env.NEXT_PUBLIC_API_URL} {process.env.API_URL}</p>
+              <p>Back-end: {process.env.NEXT_PUBLIC_API_URL} {API_URL}</p>
             </Grid.Column>
           </Grid.Row>
         </Grid>
