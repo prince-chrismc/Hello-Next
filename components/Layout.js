@@ -17,7 +17,7 @@ const Layout = ({ children }) => {
               </span>
             </Grid.Column>
             <Grid.Column>
-              <p>Back-end: {process.env.NEXT_PUBLIC_API_URL}</p>
+              <p>Back-end: {process.env.NEXT_PUBLIC_API_URL} {process.env.API_URL}</p>
             </Grid.Column>
           </Grid.Row>
         </Grid>
